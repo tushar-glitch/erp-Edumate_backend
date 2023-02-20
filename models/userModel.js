@@ -8,6 +8,9 @@ const auth_schema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    email: {
+        type:String
     }
 })
 const auth_Model = mongoose.model('users', auth_schema)
