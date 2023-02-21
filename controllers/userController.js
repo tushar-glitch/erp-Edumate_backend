@@ -165,7 +165,7 @@ class userController {
                     const token = jwt.sign({ userid, password }, secretKey, { expiresIn: '1h' })
                     console.log(token);
                     res.status(200).json({
-                        "token": token
+                        accesstoken: token
                     })
                 }
             }

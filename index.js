@@ -3,6 +3,7 @@ const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
 const user_route = require('./routes/user_routes')
+const profile_route = require('./routes/profile_routes')
 require('dotenv').config()
 app.use(cors())
 app.use(express.json())
@@ -13,5 +14,6 @@ mongoose.connect(connection_url, { useNewUrlParser: true, useUnifiedTopology: tr
         console.log("MongoDB connected");
     })
 app.use('/user',user_route)
+app.use('/profile',profile_route)
 
 app.listen(5000)
