@@ -50,6 +50,9 @@ const auth_schema = new mongoose.Schema({
     },
     DOB: {
         type:Date
+    },
+    attendance: {
+        type: Object
     }
 })
 const auth_Model = mongoose.model('users', auth_schema)
